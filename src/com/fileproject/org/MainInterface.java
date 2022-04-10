@@ -101,6 +101,7 @@ public class MainInterface {
 		
 	}
 	private static void deleteFile() {
+	    Scanner scan = new Scanner(System.in);
 		sleep();
 		int index = -1;
 		if(fileList.size() == 0) {
@@ -113,15 +114,23 @@ public class MainInterface {
 				index = fileList.indexOf(file);
 				break;
 			}
-			System.out.println("Are you sure, that you want to remove the file? Press 'Y' to continue");
-			String status = scan.nextLine();
-			if(index != -1 && status.equalsIgnoreCase("Y")) {
-				fileList.remove(index);
-				sleep();
-			}
-			System.out.println("File has been deleted successfully!");
-			
 		}
+			if(index != -1){
+			   System.out.println("Are you sure, that you want to remove the file? Press 'Y' to continue");
+			   String status = scan.nextLine();
+			   if(status.equalsIgnoreCase("y")){
+			    fileList.remove(index);
+				sleep();
+				System.out.println("");
+				System.out.println("File has been deleted successfully...");
+				return;
+			   }
+			}
+		
+			System.out.println("No file is found...");
+			System.out.println("Try again...");
+			
+		
 		// TODO Auto-generated method stub
 		
 	}
