@@ -20,10 +20,16 @@ public class MainInterface {
 		System.out.println("Enter your name");
 		adminName = scan.nextLine();
 		while(flag == true) {
+			System.out.println("");
+			System.out.println("");
+			System.out.println("1. Show all files in the Directory");
+			System.out.println("2. Show more details");
+			System.out.println("3. Exit the Application");
 			System.out.println("Enter your options");
 			caseNumber = scan.nextInt();
 			switch(caseNumber) {
-				case 1: showFiles();
+				case 1: System.out.println("The files are as follows:");
+					showFiles();
 				break;
 				case 2: showMoreDetails();
 				break;
@@ -39,7 +45,13 @@ public class MainInterface {
 	private static void showMoreDetails() {
 		boolean flag = true;
 		while(flag == true) {
-			System.out.println("Enter the Details:");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("1. Add a file");
+			System.out.println("2. Delete a file");
+			System.out.println("3. Go to main menu");
+			System.out.println("Enter the Options:");
 		int caseNumber = scan.nextInt();
 		switch(caseNumber) {
 			case 1:
@@ -61,6 +73,8 @@ public class MainInterface {
 	private static void addFile() {
 		Scanner scan = new Scanner(System.in);
 		sleep();
+		System.out.println("");
+
 		System.out.println("Enter the file details");
 		System.out.println("Enter the name of the file:");
 		String filename = scan.nextLine();
