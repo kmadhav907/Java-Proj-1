@@ -15,6 +15,8 @@ public class MainInterface {
 		boolean flag = true;
 		
 		System.out.println("Hello welcome to our Application");
+		System.out.println("--------Touch--------");
+		System.out.println("Developed by Madhav Bhat K");
 		sleep();
 		
 		System.out.println("Enter your name");
