@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class MainInterface {
-	private static ArrayList<File> fileList = new ArrayList<File>();
+		private static ArrayList<File> fileList = new ArrayList<File>();
 	static Scanner scan;
 	static String adminName; 
 	public static void main(String args[]) {
@@ -88,12 +88,12 @@ public class MainInterface {
 			userName = new String(adminName);
 		}
 		if(dir.length() == 0) {
-			fileList.add(new File(filename, userName));
+			fileList.add(new File(userName,filename));
 			sleep();
 			System.out.println("File has been inserted successfully");
 			return;
 		}
-		fileList.add(new File(filename, userName, dir));
+		fileList.add(new File(userName,filename,dir));
 		System.out.println("File has been inserted successfully");
 		sleep();
 		
